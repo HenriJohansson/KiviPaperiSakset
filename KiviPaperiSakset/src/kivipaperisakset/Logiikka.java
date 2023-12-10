@@ -27,17 +27,17 @@ public class Logiikka implements ILogiikka {
 	
 	/**
 	 * Selvitetään voittaja kahden pelaajan välillä
-	 * @param p1Vaihtoehto vaihtoehto
-	 * @param p2Vaihtoehto vaihtoehto
-	 * @return 1 on voitto, 0 on tasapeli, -1 on häviö
+	 * @param Vaihtoehto p1Vaihtoehto
+	 * @param Vaihtoehto p2Vaihtoehto
+	 * @return int: 1 on voitto, 0 on tasapeli, -1 on häviö
 	 */
 	public int voittaako(Vaihtoehto p1Vaihtoehto, Vaihtoehto p2Vaihtoehto) {
-		if(p1Vaihtoehto.voittankoVertailu(p2Vaihtoehto) == null) {
+		if(p1Vaihtoehto.voittankoVertailun(p2Vaihtoehto) == null) {
 			return 0;
 		}
-		if(p1Vaihtoehto.voittankoVertailu(p2Vaihtoehto).equals(p1Vaihtoehto)) {
+		if(p1Vaihtoehto.voittankoVertailun(p2Vaihtoehto).equals(p1Vaihtoehto)) {
 			return 1;
-		} else if (p1Vaihtoehto.voittankoVertailu(p2Vaihtoehto).equals(p2Vaihtoehto)) {
+		} else if (p1Vaihtoehto.voittankoVertailun(p2Vaihtoehto).equals(p2Vaihtoehto)) {
 			return -1;
 		}
 		return 0;

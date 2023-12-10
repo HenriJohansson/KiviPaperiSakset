@@ -2,8 +2,11 @@
 package kivipaperisakset;
 
 /**
+ * 
+ * @author Henri Johansson
+ * 
+ * Pelaaja voi pelata peliä
  *
- * @author Ira Dook
  */
 public class Pelaaja implements IPelaaja {
 
@@ -16,6 +19,7 @@ public class Pelaaja implements IPelaaja {
 
     /**
      * Valitse randomilla kivi, paperi tai sakset
+     * @return Vaihtoehto, joka valittiin.
      */
     public Vaihtoehto pelaajanValinta() {
         Vaihtoehto valinta = null;
@@ -33,10 +37,17 @@ public class Pelaaja implements IPelaaja {
         }
         return valinta;
     }
+    
+    /**
+     * Lisää yksi voitto Pelaajan voittoihin
+     */
     public void lisääVoitto() {
     	this.voitot++;
     }
 
+    /**
+     * Palauttaa voitot
+     */
     public int getVoitot() {
         return this.voitot;
     }

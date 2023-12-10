@@ -1,5 +1,11 @@
 package kivipaperisakset;
-
+/**
+ * 
+ * @author Henri Johansson
+ * 
+ * Pelilaskuri	
+ * Laskee pelin erät ja pitää yllä tasapelien määrää
+ */
 public class PeliLaskuri {
 	protected ILogiikka säännöt;
 	private int pelatutErät = 0;           // Pelattujen pelien lkm
@@ -7,7 +13,12 @@ public class PeliLaskuri {
     public PeliLaskuri() {
     	säännöt = Logiikka.getInstance();
 	}
-    
+    /**
+     * Pelataan erä ja katsotaan kumpi pelaaja voittaa
+     * @param IPelaaja pelaaja yksi
+     * @param IPelaaja pelaaja kaksi
+     * @return IPelaaja voittanut pelaaja
+     */
 	public IPelaaja erä(IPelaaja p1, IPelaaja p2) {
 		pelatutErät++;
 		int tulos = säännöt.voittaako(p1.pelaajanValinta(), p2.pelaajanValinta());
@@ -24,11 +35,17 @@ public class PeliLaskuri {
 			return null;
 		}
 	}
-	
+	/**
+	 * 
+	 * @return int pelatut erät
+	 */
 	public int getPelatutErät(){
 		return pelatutErät;
 	}
-	
+	/**
+	 * 
+	 * @return int pelatut tasapelit
+	 */
 	public int getTasapelit(){
 		return tasapelit;
 	}

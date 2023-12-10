@@ -2,10 +2,13 @@ package kivipaperisakset;
 
 /**
  *
- * @author Ira Dook
+ * @author Henri Johansson
  */
 public class Peli {
-
+	/**
+	 * Päämetodi, josta ohjelma aloittaa suorittamisensa.
+	 * @param args
+	 */
     public static void main(String args[]) {
        IPelaaja p1 = new Pelaaja();
        IPelaaja p2 = new Pelaaja();
